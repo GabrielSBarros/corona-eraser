@@ -15,18 +15,20 @@ const { body } = document;
 
 */
 
-function changeCorona(element) {
-  let { children, innerText, innerHTML } = element;
-  const changed = innerHTML.replace(
+function replaceCorona(node) {
+  node.textContent = node.textContent.replace(
     /covid-?(?=1)1?(?=9)9?|covid|corona\s?v[íi]rus?/gi,
     "💉"
   );
-  element.innerHTML = changed;
-  console.log(changed);
-  console.log("element");
-  console.log(element);
-  console.log("children");
-  console.log(children);
+}
+
+function changeCorona(element) {
+  const array = Array.from(element.childNodes);
+  console.log();
+  array.map(node => {
+    if (node.nodeName == "#text") replaceCorona(node);
+    else changeCorona(node);
+  });
 }
 
 changeCorona(body);

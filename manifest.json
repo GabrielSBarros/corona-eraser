@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Hello World!",
+  "name": "CoronaReplacer",
   "version": "0.001",
   "content_scripts": [
     {
