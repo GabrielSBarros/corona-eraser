@@ -1,19 +1,4 @@
-console.log("ready");
-
 const { body } = document;
-
-/*
-  coronavirus
-  coronavírus
-
-  corona virus
-  corona vírus
-
-  covid-19
-  covid19
-  covid
-
-*/
 
 function replaceCorona(node) {
   node.textContent = node.textContent.replace(
@@ -31,4 +16,23 @@ function changeCorona(element) {
   });
 }
 
-changeCorona(body);
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.txt === "changeCorona") {
+    changeCorona(body);
+  }
+});
+
+// changeCorona(body);
+
+/*
+  coronavirus
+  coronavírus
+
+  corona virus
+  corona vírus
+
+  covid-19
+  covid19
+  covid
+
+*/
