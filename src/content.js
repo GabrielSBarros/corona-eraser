@@ -41,18 +41,3 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
   sendResponse(resMessage);
 });
-
-// changeCorona(body);
-
-/*
-  coronavirus
-  coronavírus
-
-  corona virus
-  corona vírus
-
-  covid-19
-  covid19
-  covid
-
-*/

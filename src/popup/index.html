@@ -10,8 +10,13 @@
     <main>
       <h1>Corona Eraser 💉</h1>
       <div class="container">
-        <p>Foram encontradas ocorrências do corona vírus nessa página</p>
-        <button onclick="removeCorona()">Remover</button>
+        <p>Verifique se há ocorrências do corona vírus nesta página.</p>
+        <div class="button-container">
+          <button name="verify" onclick="findCorona()" class="verify">
+            Verificar
+          </button>
+          <button name="remove" onclick="removeCorona()">Remover</button>
+        </div>
       </div>
     </main>
   </body>
