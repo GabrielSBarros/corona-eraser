@@ -14,6 +14,12 @@ function reducer(acc, cur) {
 }
 
 function coronaNum(element) {
+  if (element.hidden || element.tagName == "SCRIPT") return 0;
+  if (element.style) {
+    const { display, visibility } = element.style;
+    if (display == "none" || visibility == "hidden" || visibility == "collapse")
+      return 0;
+  }
   const array = Array.from(element.childNodes);
   return array.reduce(reducer, 0);
 }
@@ -23,6 +29,11 @@ function replaceCorona(node) {
 }
 
 function changeCorona(element) {
+  if (element.hidden || element.tagName == "SCRIPT") return;
+  if (element.style) {
+    const { display, visibility } = element.style;
+    if (display == "none" || visibility == "hidden") return 0;
+  }
   const array = Array.from(element.childNodes);
   array.map(node => {
     if (node.nodeName == "#text") replaceCorona(node);
