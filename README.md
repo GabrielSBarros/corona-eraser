@@ -4,7 +4,7 @@
 
 ## Descrição
 
-Corona Eraser é uma extensão do chrome que encontra ocorrências da palavra coronavírus (e variações) e pode substituí-las por 💉.
+Corona Eraser é uma extensão do chrome que substitui ocorrências da palavra coronavírus (e variações) por 💉.
 
 ## Instalação
 
@@ -28,8 +28,4 @@ Corona Eraser é uma extensão do chrome que encontra ocorrências da palavra co
 
 ## Como Usar
 
-1. Clique no botão da extensão para exibir um pop-up
-
-2. O botão verificar mostra o número de ocorrências das palavras
-
-3. O botão remover substitui as ocorrências
+Clique no botão da extensão para substituir todas as ocorrências do corona vírus na página.
